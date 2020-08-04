@@ -67,8 +67,6 @@ file created in the previous step:
 
 Links like below can be clicked to open a file in the editor:
 
-- {% render "code-server/open-file-widget.liquid", file: "/home/eduk8s/Dockerfile", lineno: 8 %}
-- {% render "code-server/open-file-widget.liquid", file: "/home/eduk8s/exercises/.empty" %}
 - <span class="editor_link" data-file="/home/eduk8s/Dockerfile" data-line="8"/>
 - <span class="editor_link" data-file="/home/eduk8s/exercises/.empty"/>
 - <span class="editor_link" data-file="/home/eduk8s/Dockerfile" data-line="10">Click me</span>
