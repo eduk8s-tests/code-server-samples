@@ -1,0 +1,7 @@
+modules:
+  #################################################################
+  ## ide playground not part of the real content...
+  # should be removed for final/production version of workshop content.
+  playground:
+    name: Experiments with IDE
+  ##################################################################

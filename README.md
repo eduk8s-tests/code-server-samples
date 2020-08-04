@@ -1,2 +1,3 @@
-# code-server-samples
-Sample lab content for Code-Server integration
+LAB - Spring Boot 
+=====================
+Sample workshop for Spring Boot app deployment

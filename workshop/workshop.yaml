@@ -1,0 +1,5 @@
+name: Code-Server Samples
+
+modules:
+    activate:
+        - playground

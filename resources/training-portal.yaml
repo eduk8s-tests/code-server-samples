@@ -1,0 +1,11 @@
+apiVersion: training.eduk8s.io/v1alpha1
+kind: TrainingPortal
+metadata:
+  name: code-server-samples
+spec:
+  workshops:
+    - name: code-server-samples
+      reserved: 1
+      capacity: 5
+      expires: 60m
+      orphaned: 5m
