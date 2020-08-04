@@ -100,7 +100,7 @@ Some code blocks are copyable with one click, so you can use those to transfer c
 echo "Text to copy"
 ```
 
-You may also see links that can be clicked to open a file in the editor: {% render "code-server/open-file-widget.liquid", file: "/home/eduk8s/Dockerfile", lineno: 8 %}
+You may also see links that can be clicked to open a file in the editor: <span class="editor_link" data-file="/home/eduk8s/Dockerfile" data-line="8"/>
 
 There are also links to execute commands in the IDE, e.g: <span class="editor_command_link" data-command="workbench.action.terminal.toggleTerminal">Open Terminal</span>.
 
