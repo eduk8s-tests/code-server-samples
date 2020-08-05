@@ -36,7 +36,3 @@ COPY --from=code-server --chown=1001:0 /opt/code-server/initializr-extension/. /
 RUN jq '."spring.initializr.defaultOpenProjectMethod"="Add to Workspace"' ~/.local/share/code-server/User/settings.json > ~/temp_settings.json \
     && mv ~/temp_settings.json ~/.local/share/code-server/User/settings.json
 
-# COPY --chown=1001:0 . /home/eduk8s/
-# RUN mv /home/eduk8s/workshop /opt/workshop
-# RUN fix-permissions /home/eduk8s
-
