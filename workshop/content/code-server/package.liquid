@@ -41,7 +41,7 @@
             console.log(name + " SUCCESS");
         })
         .fail(function (err) {
-            // Internal server error means error executing stuff on the vscode side - no need to repeat it since we got to VSCode/Code-Server
+            // 504 Gateway Timeout: Service isn't up yet hence retry.
             if (err.status === 504) {
                 console.log(name + " FAIL");
                 if (retries>0) {
