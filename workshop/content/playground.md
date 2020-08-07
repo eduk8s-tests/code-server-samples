@@ -49,6 +49,11 @@ file created in the previous step:
   - containerPort: 6677
 </pre>
 
+<pre class="pastable" data-file="/tmp/deploy.yml" data-yaml-path="spec.template.spec.containers[0]">
+blah: blah
+froo: froooooo
+</pre>
+
 Links like below can be clicked to open a file in the editor:
 
 - <span class="editor_link" data-file="/home/eduk8s/Dockerfile" data-line="8"/>
