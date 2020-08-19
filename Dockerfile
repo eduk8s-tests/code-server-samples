@@ -31,8 +31,3 @@ RUN rm -rf /opt/code-server/extensions/vscjava.vscode-spring-initializr* \
     && rm -rf /opt/vscode-spring-initializr
 
 COPY --from=code-server --chown=1001:0 /opt/code-server/initializr-extension/. /opt/code-server/extensions/
-
-# Modify code-server settings to open projects in the current workspace by default
-RUN jq '."spring.initializr.defaultOpenProjectMethod"="Add to Workspace"' ~/.local/share/code-server/User/settings.json > ~/temp_settings.json \
-    && mv ~/temp_settings.json ~/.local/share/code-server/User/settings.json
-
