@@ -2,7 +2,7 @@
 FROM node:current as vscode-spring-initializr
 RUN mkdir /work
 WORKDIR /work
-ADD https://github.com/BoykoAlex/vscode-spring-initializr/archive/customize.zip /work/initializr-extension.zip
+ADD https://github.com/eduk8s/vscode-spring-initializr/archive/customize.zip /work/initializr-extension.zip
 RUN unzip initializr-extension.zip 
 RUN rm initializr-extension.zip
 RUN cd vscode-spring-initializr-* \
@@ -15,8 +15,8 @@ FROM quay.io/eduk8s/eduk8s-vscode-helper:200807.182328.2129ce9 AS vscode-helper
 
 # Produces installed copy of vscode-spring-initializr at /opt/code-server/initializr-extension
 FROM quay.io/eduk8s/pkgs-code-server:200617.031609.8e8a4e1 AS code-server
-COPY --from=vscode-spring-initializr --chown=1001:0 /work/vscode-spring-initializr-0.4.8.vsix /tmp/vscode-spring-initializr-0.4.8.vsix
-RUN /opt/code-server/bin/code-server --extensions-dir /opt/code-server/initializr-extension --install-extension /tmp/vscode-spring-initializr-0.4.8.vsix && \
+COPY --from=vscode-spring-initializr --chown=1001:0 /work/vscode-spring-initializr-0.5.0.vsix /tmp/vscode-spring-initializr-0.5.0.vsix
+RUN /opt/code-server/bin/code-server --extensions-dir /opt/code-server/initializr-extension --install-extension /tmp/vscode-spring-initializr-0.5.0.vsix && \
     rm /tmp/*.vsix
 
 # Layers the installed java vscode extensions into eduk8s Java environment image
