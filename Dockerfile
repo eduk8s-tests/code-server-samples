@@ -2,7 +2,7 @@
 FROM node:current as vscode-spring-initializr
 RUN mkdir /work
 WORKDIR /work
-ADD https://github.com/eduk8s/vscode-spring-initializr/archive/customize.zip /work/initializr-extension.zip
+ADD https://github.com/microsoft/vscode-spring-initializr/archive/master.zip /work/initializr-extension.zip
 RUN unzip initializr-extension.zip 
 RUN rm initializr-extension.zip
 RUN cd vscode-spring-initializr-* \
